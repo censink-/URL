@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+
+	RewriteRule    ^/?$ index.php
+ 	RewriteRule    ^([0-9]+)$ index.php?id=$1
+ 	RewriteRule    ^([0-9]+)/$ index.php?id=$1
+ 	#Complicated referal system:
+ 	#RewriteRule    ^([0-9]+)/([0-9]+)$ index.php?id=$1&ref=$2
+ 	#RewriteRule    ^([0-9]+)/([0-9]+)/$ index.php?id=$1&ref=$2
+    RewriteRule    ^admin/?$ admin.php
+</IfModule>
